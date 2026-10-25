@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre commande — Coutellerie du Mas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="note-maquette">Maquette — proposition A « Atelier » · nom, textes et prix provisoires · <a href="../index.html">retour aux propositions</a></div>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="accueil.html">
+        <strong>Coutellerie du Mas</strong>
+        <span>Couteaux forgés · Cévennes</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="couteaux.html">Les couteaux</a>
+        <a href="accueil.html#atelier">L'atelier</a>
+        <a href="accueil.html#entretien">Entretien</a>
+        <a href="accueil.html#contact">Contact</a>
+        <a class="panier" href="commande.html">Mon panier (1)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="conteneur">
+      <h1 style="margin-top:36px">Votre commande</h1>
+      <ol class="etapes">
+        <li class="encours">Panier et livraison</li>
+        <li>Paiement sécurisé</li>
+        <li>Confirmation</li>
+      </ol>
+      <div class="commande">
+        <div>
+          <section class="bloc">
+            <h2>Votre panier</h2>
+            <div class="ligne-panier">
+              <img src="../img/couteau-buis-noyer.jpg" alt="">
+              <div>
+                <div class="nom">Le Cévenol</div>
+                <div class="detail">Buis et noyer · pièce unique</div>
+                <button type="button">Retirer du panier</button>
+              </div>
+              <div class="montant"><strong>180 €</strong></div>
+            </div>
+            <p class="petit" style="margin:14px 0 0">Ce couteau vous est réservé pendant 30 minutes.</p>
+          </section>
+
+          <section class="bloc">
+            <h2>Comment souhaitez-vous le recevoir&nbsp;?</h2>
+            <label class="choix">
+              <input type="radio" name="livraison" checked>
+              <span class="prix-choix">9 €</span>
+              Livraison à domicile
+              <small>Colissimo suivi, remis contre signature · 2 à 4 jours après l'envoi</small>
+            </label>
+            <label class="choix">
+              <input type="radio" name="livraison">
+              <span class="prix-choix">Gratuit</span>
+              Retrait à l'atelier
+              <small>Le Mas, Village-des-Cévennes · je vous appelle pour convenir d'un moment</small>
+            </label>
+            <p class="petit">Votre adresse vous sera demandée à l'étape suivante.</p>
+          </section>
+        </div>
+
+        <aside>
+          <section class="bloc">
+            <h2>Récapitulatif</h2>
+            <div class="total"><span>Le Cévenol</span><span>180,00 €</span></div>
+            <div class="total"><span>Livraison</span><span>9,00 €</span></div>
+            <div class="total final"><span>Total TTC</span><span>189,00 €</span></div>
+            <p class="petit">TVA non applicable, art. 293 B du CGI.</p>
+
+            <label class="case"><input type="checkbox"> <span>Je certifie avoir 18 ans ou plus.</span></label>
+            <label class="case"><input type="checkbox"> <span>J'ai lu et j'accepte les <a href="#">conditions générales de vente</a>, dont le droit de rétractation de 14 jours.</span></label>
+
+            <a class="bouton large" href="#" style="margin-top:10px">Continuer vers le paiement</a>
+            <p class="stripe-info">🔒 Paiement par carte sur une page sécurisée (Stripe)</p>
+          </section>
+          <section class="bloc">
+            <p style="margin:0"><strong>Vous préférez commander par téléphone&nbsp;?</strong><br>Appelez le <a href="tel:+33466000000">04 66 00 00 00</a>. Règlement par chèque ou virement possible.</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="colonnes">
+        <div>
+          <h4>Coutellerie du Mas</h4>
+          <p>Le Mas, 30000 Village-des-Cévennes<br>04 66 00 00 00</p>
+        </div>
+        <div>
+          <h4>Commander</h4>
+          <ul>
+            <li><a href="#">Livraison et retours</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Se rétracter d'un achat</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Données personnelles</a></li>
+            <li><a href="#">Vente réservée aux personnes majeures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bas">
+        <span>© 2026 Coutellerie du Mas · Artisan coutelier</span>
+        <span>Paiement sécurisé par carte bancaire</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

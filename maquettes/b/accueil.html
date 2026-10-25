@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coutellerie du Mas — Proposition B « Schiste »</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* Proposition B — « Schiste » : sombre, inspiré de la pierre des Cévennes ; le bois et l'acier ressortent */
+    :root {
+      --fond: #1d1f21;
+      --surface: #26292c;
+      --texte: #eee9e1;
+      --texte-doux: #b3aba0;
+      --ligne: #3a3e42;
+      --accent: #d3a676;
+      --rayon: 4px;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 112.5%; }
+    body { margin: 0; background: var(--fond); color: var(--texte); font-family: "Source Sans 3", system-ui, sans-serif; line-height: 1.65; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    h1, h2, h3 { font-family: "Spectral", Georgia, serif; font-weight: 400; line-height: 1.2; margin: 0 0 .6em; }
+    h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); }
+    .conteneur { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .note-maquette { background: #000; color: #ccc; font-size: .8rem; text-align: center; padding: 6px 16px; }
+    .note-maquette a { color: var(--accent); }
+
+    .entete .conteneur { display: flex; justify-content: space-between; align-items: center; min-height: 92px; gap: 20px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+    .logo { color: var(--texte); text-decoration: none; font-family: "Spectral", Georgia, serif; font-size: 1.6rem; letter-spacing: .02em; }
+    .nav { display: flex; gap: 6px 28px; flex-wrap: wrap; align-items: center; }
+    .nav a { color: var(--texte); text-decoration: none; }
+    .nav a:hover { color: var(--accent); }
+    .nav .panier { border: 1.5px solid var(--texte-doux); border-radius: var(--rayon); padding: 6px 14px; }
+
+    .heros { position: relative; min-height: 78vh; display: flex; align-items: flex-end; }
+    .heros img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+    .heros::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29,31,33,.1) 30%, rgba(29,31,33,.95) 92%); }
+    .heros .conteneur { position: relative; z-index: 1; padding-bottom: 64px; width: 100%; }
+    .heros p { font-size: 1.15rem; max-width: 32em; color: #ddd5ca; }
+    .bouton { display: inline-block; background: var(--accent); color: #1d1f21; font-weight: 700; text-decoration: none; padding: 16px 30px; min-height: 56px; border-radius: var(--rayon); font-size: 1.05rem; }
+    .bouton:hover { background: #e2bb91; }
+
+    .section { padding: 72px 0; border-top: 1px solid var(--ligne); }
+    .liste { display: grid; gap: 0; }
+    .ligne { display: grid; grid-template-columns: 1.6fr 1fr auto; gap: 32px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--ligne); text-decoration: none; color: var(--texte); }
+    .ligne:hover { background: var(--surface); }
+    .ligne img { border-radius: var(--rayon); aspect-ratio: 16/6; object-fit: cover; width: 100%; }
+    .ligne h3 { margin: 0 0 4px; font-size: 1.5rem; }
+    .ligne .bois { color: var(--texte-doux); margin: 0; }
+    .ligne .prix { font-size: 1.25rem; font-weight: 700; white-space: nowrap; }
+    .ligne .voir { display: block; font-size: .9rem; color: var(--accent); font-weight: 400; }
+
+    .deux { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .deux img { border-radius: var(--rayon); aspect-ratio: 1/1; object-fit: cover; }
+    .doux { color: var(--texte-doux); }
+    .contact { text-align: center; }
+    .contact .tel { display: block; font-family: "Spectral", Georgia, serif; font-size: 2.4rem; color: var(--texte); text-decoration: none; margin: 10px 0; }
+    .pied { border-top: 1px solid var(--ligne); padding: 36px 0; color: var(--texte-doux); font-size: .9rem; }
+    .pied .conteneur { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .pied a { color: var(--texte-doux); margin-right: 18px; }
+
+    @media (max-width: 800px) {
+      .ligne { grid-template-columns: 1fr; gap: 12px; }
+      .deux { grid-template-columns: 1fr; gap: 32px; }
+      .heros { min-height: 70vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="note-maquette">Maquette — proposition B « Schiste » · <a href="../index.html">retour aux propositions</a></div>
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="#">Coutellerie du Mas</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#couteaux">Les couteaux</a>
+        <a href="#atelier">L'atelier</a>
+        <a href="#contact">Contact</a>
+        <a class="panier" href="../a/commande.html">Mon panier (0)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="heros">
+      <img src="../img/atelier-presentoir.jpg" alt="Présentoir en bois avec huit couteaux artisanaux">
+      <div class="conteneur">
+        <h1>Forgés à la main,<br>dans les Cévennes.</h1>
+        <p>Des couteaux de cuisine uniques, aux manches taillés dans les bois de la région.</p>
+        <a class="bouton" href="#couteaux">Découvrir les couteaux</a>
+      </div>
+    </section>
+
+    <section class="section" id="couteaux">
+      <div class="conteneur">
+        <h2>Les couteaux disponibles</h2>
+        <p class="doux" style="margin-bottom:28px">Une pièce, un exemplaire. Présentés en liste, du plus grand au plus petit.</p>
+        <div class="liste">
+          <a class="ligne" href="../a/couteau.html">
+            <img src="../img/couteau-chef-chene.jpg" alt="Couteau de chef à manche en chêne des tourbières">
+            <div><h3>Couteau de chef</h3><p class="bois">Chêne des tourbières · lame 20 cm</p></div>
+            <div class="prix">240 €<span class="voir">Voir le couteau →</span></div>
+          </a>
+          <a class="ligne" href="../a/couteau.html">
+            <img src="../img/couteau-buis-noyer.jpg" alt="Couteau à manche en buis et noyer">
+            <div><h3>Le Cévenol</h3><p class="bois">Buis et noyer · lame 14 cm</p></div>
+            <div class="prix">180 €<span class="voir">Voir le couteau →</span></div>
+          </a>
+          <a class="ligne" href="../a/couteau.html">
+            <img src="../img/couteau-chene-fume.jpg" alt="Petit santoku à manche sombre">
+            <div><h3>Petit santoku</h3><p class="bois">Chêne des tourbières, olivier · lame 13 cm</p></div>
+            <div class="prix">170 €<span class="voir">Voir le couteau →</span></div>
+          </a>
+          <a class="ligne" href="../a/couteau.html">
+            <img src="../img/couteau-office-buis.jpg" alt="Couteau d'office à manche octogonal en buis">
+            <div><h3>Couteau d'office</h3><p class="bois">Buis et noyer · lame 10 cm</p></div>
+            <div class="prix">100 €<span class="voir">Voir le couteau →</span></div>
+          </a>
+        </div>
+        <p style="margin-top:32px"><a href="../a/couteaux.html">Voir tous les couteaux (10)</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="atelier">
+      <div class="conteneur deux">
+        <img src="../img/atelier-planche.jpg" alt="Planche en bois brut présentant deux couteaux">
+        <div>
+          <h2>L'atelier</h2>
+          <p class="doux">Chaque lame est forgée, trempée et affûtée ici, à la main. Les manches viennent du buis des causses, de l'olivier et du noyer du village.</p>
+          <p class="doux">Affûtage offert à vie. Couteaux sur mesure sur demande.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="conteneur">
+        <h2>Une question&nbsp;? Appelez-moi.</h2>
+        <a class="tel" href="tel:+33466000000">04 66 00 00 00</a>
+        <p class="doux">Du lundi au vendredi, 9 h – 18 h · contact@coutellerie-du-mas.fr</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <span>© 2026 Coutellerie du Mas · Artisan coutelier · Cévennes</span>
+      <span><a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Données personnelles</a><a href="#">Se rétracter d'un achat</a></span>
+    </div>
+  </footer>
+</body>
+</html>

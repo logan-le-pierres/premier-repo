@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquettes — Coutellerie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #f7f3ec; color: #26221e; font-family: "Source Sans 3", system-ui, sans-serif; font-size: 18px; line-height: 1.6; }
+    main { max-width: 980px; margin: 0 auto; padding: 48px 20px 72px; }
+    h1, h2 { font-family: "EB Garamond", Georgia, serif; font-weight: 500; }
+    h1 { font-size: 2.4rem; margin: 0 0 .3em; }
+    .props { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 32px; }
+    .prop { background: #fffdf9; border: 1px solid #e2d9cb; border-radius: 6px; padding: 24px; }
+    .prop.sombre { background: #1d1f21; color: #eee9e1; border-color: #1d1f21; }
+    .prop.sombre a { color: #d3a676; }
+    .prop h2 { margin: 0 0 .3em; }
+    .pastilles { display: flex; gap: 8px; margin: 12px 0; }
+    .pastilles span { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); }
+    ul { padding-left: 1.2em; }
+    a { color: #74452a; }
+    @media (max-width: 760px) { .props { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Maquettes du site de coutellerie</h1>
+    <p>Deux directions visuelles, toutes deux pensées pour un public de 50 ans et plus&nbsp;: grands caractères (18 px minimum), contrastes forts, un seul bouton d'action par écran, aucun carrousel ni fenêtre surgissante, et le numéro de téléphone toujours visible.</p>
+
+    <div class="props">
+      <section class="prop">
+        <h2>A — « Atelier »</h2>
+        <div class="pastilles"><span style="background:#f7f3ec"></span><span style="background:#fffdf9"></span><span style="background:#74452a"></span><span style="background:#26221e"></span></div>
+        <p>Clair et chaleureux, couleur lin et noyer. Rassurant, très lisible, proche d'un catalogue papier. <strong>Ma recommandation.</strong></p>
+        <ul>
+          <li><a href="a/accueil.html">Accueil</a></li>
+          <li><a href="a/couteaux.html">Catalogue</a></li>
+          <li><a href="a/couteau.html">Fiche d'un couteau</a></li>
+          <li><a href="a/commande.html">Panier et commande</a></li>
+        </ul>
+      </section>
+      <section class="prop sombre">
+        <h2>B — « Schiste »</h2>
+        <div class="pastilles"><span style="background:#1d1f21"></span><span style="background:#26292c"></span><span style="background:#d3a676"></span><span style="background:#eee9e1"></span></div>
+        <p>Sombre, couleur pierre des Cévennes&nbsp;: met en valeur le bois et l'acier, plus « galerie ». Un peu moins confortable à lire longtemps.</p>
+        <ul>
+          <li><a href="b/accueil.html">Accueil (page unique)</a></li>
+        </ul>
+      </section>
+    </div>
+    <p style="margin-top:32px;font-size:.9rem;color:#5f574e">Nom « Coutellerie du Mas », adresse, téléphone, prix et descriptions sont provisoires. Photos&nbsp;: recadrages des photos du marché, à remplacer par des photos sur fond neutre.</p>
+  </main>
+</body>
+</html>
